@@ -1,0 +1,95 @@
+<div class="container">
+    <div class="profile-img">
+        <img src="{{edit.profile_pic_url}}" class="card-img-top" alt="...">
+    </div>
+    <div class="edit-form">
+        <span class="edit-form__info">Name:</span>
+        <input type="text" id="firstName" name="firstName" class="form-control"
+               required minlength="4"
+               [(ngModel)]="edit.first_name" #firstName="ngModel">
+        <div *ngIf="firstName.invalid"
+             class="alert">
+            <div *ngIf="firstName.errors?.required">
+                Name is required.
+            </div>
+            <div *ngIf="firstName.errors?.minlength">
+                Name must be at least 4 characters long.
+            </div>
+        </div>
+    </div>
+    <div class="edit-form">
+        <span class="edit-form__info">Last Name:</span>
+        <input type="text" id="lastName" name="lastName" class="form-control"
+               required minlength="4"
+               [(ngModel)]="edit.last_name" #lastName="ngModel">
+        <div *ngIf="lastName.invalid"
+             class="alert">
+            <div *ngIf="lastName.errors?.required">
+                Last Name is required.
+            </div>
+        </div>
+    </div>
+    <div class="edit-form">
+        <span class="edit-form__info">Company:</span>
+        <input type="text" id="company" name="company" class="form-control"
+               required minlength="4"
+               [(ngModel)]="edit.company" #company="ngModel">
+        <div *ngIf="company.invalid"
+             class="alert">
+            <div *ngIf="company.errors?.required">
+                Company name is required.
+            </div>
+        </div>
+    </div>
+    <div class="edit-form">
+        <span class="edit-form__info">Job Title:</span>
+        <input type="text" id="jobTitle" name="jobTitle" class="form-control"
+               required minlength="4"
+               [(ngModel)]="edit.job_title" #jobTitle="ngModel">
+        <div *ngIf="jobTitle.invalid"
+             class="alert">
+            <div *ngIf="jobTitle.errors?.required">
+                Job title is required.
+            </div>
+        </div>
+    </div>
+    <div class="edit-form">
+        <span class="edit-form__info">Email Address:</span>
+        <input type="email" id="email" name="email" class="form-control"
+               required minlength="4"
+               [(ngModel)]="edit.email" #email="ngModel">
+        <div *ngIf="email.invalid"
+             class="alert">
+            <div *ngIf="email.errors?.required">
+                Email is required.
+            </div>
+        </div>
+    </div>
+    <div class="edit-form">
+        <span class="edit-form__info">Country:</span>
+        <input type="text" id="country" name="country" class="form-control"
+               required minlength="4"
+               [(ngModel)]="edit.country" #country="ngModel">
+        <div *ngIf="country.invalid"
+             class="alert">
+            <div *ngIf="country.errors?.required">
+                Country is required.
+            </div>
+        </div>
+    </div>
+    <div class="edit-form">
+        <span class="edit-form__info">Phone number:</span>
+        <input type="text" id="city" name="city" class="form-control"
+               required minlength="4"
+               [(ngModel)]="edit.city" #city="ngModel">
+        <div *ngIf="city.invalid"
+             class="alert">
+            <div *ngIf="city.errors?.required">
+                Country is required.
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn btn-success" (click)="saveUser(edit)">Save</button>
+</div>
+
+

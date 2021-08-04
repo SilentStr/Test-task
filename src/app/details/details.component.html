@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="profile-img">
+        <img src="{{details.profile_pic_url}}" class="card-img-top" alt="profilePic">
+    </div>
+    <h5 class="card-title">{{details.first_name}} {{details.last_name}}</h5>
+    <p class="card-text">Company: {{details.company}}</p>
+    <p class="card-text">Job Title: {{details.job_title}}</p>
+    <p class="card-text">Email Address: {{details.email}}</p>
+    <p class="card-text">Country: {{details.country}}</p>
+    <p class="card-text">City: {{details.city}}</p>
+    <button type="button" class="btn btn-warning" (click)="editUser(details)">Edit</button>
+</div>

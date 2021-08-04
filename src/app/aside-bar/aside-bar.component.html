@@ -1,0 +1,17 @@
+<section class="aside-bar aside-bar-items">
+  <input class="aside-bar-items__search" placeholder="Search..." type="search" [(ngModel)]='searchText'>
+  <div class="cards-cover" >
+    <div *ngFor="let user of users | filter: searchText" class="cards" style="width: 18rem;">
+        <div class="card" (click)="openDetails(user)">
+            <img src="{{user.profile_pic_url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+
+                <h5 class="card-title">{{user.first_name}} {{user.last_name}}</h5>
+                <p class="card-text">{{user.company}}</p>
+                <p class="card-text">{{user.job_title}}</p>
+
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
